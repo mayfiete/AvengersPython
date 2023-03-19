@@ -1,8 +1,10 @@
 
 
 # create a class to encapsulate the database connection
-import csv
 from db_connx import db_connx
+import csv
+
+# create a class to encapsulate the database connection
 
 conn = db_connx()
 conn.connect()
@@ -11,7 +13,7 @@ conn.connect()
 # Open the CSV file and read its contents
 with open('C:/Interview/Avengers/AvengersPython/marvel.csv', 'r') as f:
     reader = csv.reader(f, delimiter='|')
-    next(reader)  # skip the header row
+    # next(reader)  # skip the header row
     rows = [row for row in reader]
 
 # Create a cursor object

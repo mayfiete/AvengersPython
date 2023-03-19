@@ -22,8 +22,11 @@ class db_connx:
         self.cur.close()
         self.conn.close()
 
-    def execute(self, query):
-        self.cur.execute(query)
+    def execute(self, query, params=None):
+        if params:
+            self.cur.execute(query, params)
+        else:
+            self.cur.execute(query)
 
     def fetchall(self):
         rows = self.cur.fetchall()
