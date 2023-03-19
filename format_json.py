@@ -19,13 +19,10 @@ hero = results[0]['name']  # returns the name of the first dictionary
 
 # returns the collectionURI of the first dictionary
 collectionResource = results[0]['comics']['items']
-
-# print(name)
-# print(results)
-
+# print(collectionResource)
 
 iterator = df['data']['limit']  # limit the number of results
-# print(int(iterator))
+print(int(iterator))
 
 # loop through the results and print the name of each resourceURI
 for i in range(int(iterator)):
