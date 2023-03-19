@@ -1,5 +1,4 @@
 
-
 # create a class to encapsulate the database connection
 from matplotlib import pyplot as plt
 import csv
@@ -9,7 +8,6 @@ from db_connx import db_connx
 
 conn = db_connx()
 conn.connect()
-
 
 # Construct the SQL query to insert the data into the database
 query = "SELECT name, comic FROM character_comic;"
