@@ -13,7 +13,7 @@ public_key = "dda446b2e1c24ad15b95764453ea581f"
 private_key = "981b3c906e07a0d1f4acf631bf103087b13099c6"
 x = Marvel(public_key, private_key)
 
-row = x.fetch_characters('Human Torch', 100)
+row = x.fetch_characters('Human Torch', 20)
 print("Comic Character: ", row)
 
 # write to a file

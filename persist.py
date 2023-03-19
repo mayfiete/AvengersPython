@@ -14,21 +14,10 @@ db_port = "5432"
 conn = psycopg2.connect(host=db_host, database=db_name,
                         user=db_user, password=db_password, port=db_port)
 
-# Open the flat file
-# with open('C:\Interview\Avengers\marvel.csv', 'r') as f:
-#     reader = csv.reader(f, delimiter='\t')
-#     next(reader)  # Skip the header row
-#     for row in reader:
-#         # Insert each row into the database
-#         # cursor.execute("INSERT INTO character_comic (name, comic) VALUES (%s, %s, %s')", (row[0], row[1], row[2]))
-#         cursor.execute(
-#             "INSERT INTO character_comic (name, comic) VALUES (%s, %s)", (
-#                 row[0], row[1])
-#         )
 
 # Open the CSV file and read its contents
-with open('C:\Interview\Avengers\marvel.csv', 'r') as f:
-    reader = csv.reader(f, delimiter='\t')
+with open('C:/Interview/Avengers/AvengersPython/marvel.csv', 'r') as f:
+    reader = csv.reader(f, delimiter='|')
     # next(reader)  # skip the header row
     rows = [row for row in reader]
 
@@ -36,15 +25,15 @@ with open('C:\Interview\Avengers\marvel.csv', 'r') as f:
 cur = conn.cursor()
 
 # Construct the SQL query to insert the data into the database
-query = "INSERT INTO character_comic (name, comic) VALUES (%s, %s)"
+query = "INSERT INTO character_comic (name, comic) VALUES (%s, %s) ON CONFLICT DO NOTHING;"
 
 
 # Execute the query for each row in the CSV file
 for row in rows:
     print(row)
     # print(row[0])
-    cur.execute(query, row)
-    # print(query, row)
+    # cur.execute(query, row)
+    print(query, row)
 
 # Commit the changes to the database
 conn.commit()
