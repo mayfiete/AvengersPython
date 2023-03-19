@@ -32,8 +32,8 @@ query = "INSERT INTO character_comic (name, comic) VALUES (%s, %s) ON CONFLICT D
 for row in rows:
     print(row)
     # print(row[0])
-    # cur.execute(query, row)
-    print(query, row)
+    cur.execute(query, row)
+    # print(query, row)
 
 # Commit the changes to the database
 conn.commit()

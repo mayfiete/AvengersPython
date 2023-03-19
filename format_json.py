@@ -28,8 +28,10 @@ print(int(iterator))
 for i in range(int(iterator)):
     print(collectionResource[i]['name'])
     # write to csv file
-    persister = hero + '|' + collectionResource[i]['name']
+    #persister = hero + '|' + collectionResource[i]['name']
     with open('C:\Interview\Avengers\AvengersPython\marvel.csv', 'a') as f:
-        json.dump(persister, f)
+        json.dump(hero, f)
+        f.write('|')
+        json.dump(collectionResource[i]['name'], f)
         # add a new line
         f.write('\n')
