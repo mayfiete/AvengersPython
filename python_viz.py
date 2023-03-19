@@ -9,4 +9,3 @@ import pandas as pd
 
 # # Print the pivot table
 # print(pivot_table)
-

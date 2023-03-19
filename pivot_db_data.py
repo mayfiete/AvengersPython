@@ -4,7 +4,6 @@ import psycopg2
 import csv
 import pandas as pd
 
-
 # AWS RDS database configuration
 # put these in a config file and import them instead of hardcoding them here
 db_host = "marvelgetwell.cs1gposyeo3a.us-east-1.rds.amazonaws.com"
@@ -27,15 +26,11 @@ cur.execute(query)
 # fetch all the rows from the database
 rows = cur.fetchall()
 
-# print the rows
-for row in rows:
-    print(row)
 
 # put the rows into pivot table
 # Create a pivot table using the pandas pivot_table() function
 df = pd.DataFrame(rows, columns=['name', 'comic'])
-pivot_table = pd.pivot_table(
-    df, index='name', columns='comic', aggfunc='count')
+# count the number of comics for each character
+comic_counts = df.groupby('name')['comic'].count()
 
-
-print(pivot_table)
+print(comic_counts)
