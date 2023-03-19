@@ -4,9 +4,9 @@ from matplotlib import pyplot as plt
 import csv
 import pandas as pd
 import numpy as np
-from db_connx import db_connx
+from DbConnx import DbConnx
 
-conn = db_connx()
+conn = DbConnx()
 conn.connect()
 
 # Construct the SQL query to insert the data into the database

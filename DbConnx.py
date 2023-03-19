@@ -1,7 +1,7 @@
 
 
 # create a class to encapsulate the database connection
-class db_connx:
+class DbConnx:
     def __init__(self, db_host="marvelgetwell.cs1gposyeo3a.us-east-1.rds.amazonaws.com", db_name="postgres", db_user="getwell", db_password="Voltron*09", db_port="5432"
                  ):
         self.db_host = db_host

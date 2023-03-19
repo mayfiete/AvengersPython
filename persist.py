@@ -1,12 +1,12 @@
 
 
 # create a class to encapsulate the database connection
-from db_connx import db_connx
+from DbConnx import DbConnx
 import csv
 
 # create a class to encapsulate the database connection
 
-conn = db_connx()
+conn = DbConnx()
 conn.connect()
 
 
