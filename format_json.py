@@ -29,6 +29,6 @@ for i in range(int(iterator)):
     print(collectionResource[i]['name'])
     # write to csv file
     with open('C:\Interview\Avengers\marvel.csv', 'a') as f:
-        json.dump(hero + "  " + collectionResource[i]['name'], f)
+        json.dump(hero + "    " + collectionResource[i]['name'], f)
         # add a new line
         f.write('\n')
