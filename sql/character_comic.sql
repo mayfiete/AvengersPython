@@ -1,6 +1,6 @@
 
 create table character_comic (
-	id serial, 
+	id serial primary key, 
 	name varchar(250), 
 	comic varchar(750)
 ); 
