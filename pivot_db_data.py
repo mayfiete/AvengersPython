@@ -2,7 +2,6 @@
 
 # create a class to encapsulate the database connection
 from matplotlib import pyplot as plt
-import psycopg2
 import csv
 import pandas as pd
 import numpy as np
