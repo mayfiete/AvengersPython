@@ -4,7 +4,6 @@ import json
 import hashlib
 import datetime
 from random import randint
-# import pyodbc
 from marvelClass import Marvel
 
 # Define API endpoint and authentication keys
