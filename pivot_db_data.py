@@ -1,5 +1,6 @@
 
 # fetch data from the database
+from matplotlib import pyplot as plt
 import psycopg2
 import csv
 import pandas as pd
@@ -34,3 +35,12 @@ df = pd.DataFrame(rows, columns=['name', 'comic'])
 comic_counts = df.groupby('name')['comic'].count()
 
 print(comic_counts)
+
+# create a histogram image of the data
+comic_counts.plot(kind='hist', title='Number of Comics per Character')
+plt.savefig('comic_counts.png')
+
+# close the cursor and connection to so the server can allocate
+# bandwidth to other requests
+cur.close()
+conn.close()
