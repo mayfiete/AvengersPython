@@ -9,10 +9,6 @@ df = pd.read_json('C:\Interview\Avengers\AvengersPython\marvel.json')
 # view the dataframe
 # print(df.head())
 
-
-# convert the json file to csv
-# df.to_csv('C:\Interview\Avengers\marvel.csv', index=False)
-
 # extract results from the json file
 results = df['data']['results']  # returns a list of dictionaries
 hero = results[0]['name']  # returns the name of the first dictionary
@@ -28,7 +24,6 @@ print(int(iterator))
 for i in range(int(iterator)):
     print(collectionResource[i]['name'])
     # write to csv file
-    #persister = hero + '|' + collectionResource[i]['name']
     with open('C:\Interview\Avengers\AvengersPython\marvel.csv', 'a') as f:
         json.dump(hero, f)
         f.write('|')

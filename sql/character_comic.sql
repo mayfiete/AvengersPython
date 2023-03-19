@@ -1,8 +1,9 @@
 
 create table character_comic (
-	id serial primary key, 
+	id serial, 
 	name varchar(250), 
-	comic varchar(750)
+	comic varchar(750), 
+	character_id bigint
 ); 
 
 select * 
