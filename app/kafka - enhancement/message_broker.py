@@ -6,6 +6,7 @@ from DbConnx import DbConnx
 import csv
 
 # RabbitMQ connection parameters
+# enhancement to have these in a config file or have calling application pass in
 rabbitmq_host = 'localhost'
 rabbitmq_port = 5672
 rabbitmq_username = 'guest'
