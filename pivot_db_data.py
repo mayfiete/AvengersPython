@@ -26,8 +26,9 @@ comic_counts = df.pivot_table(index='name', aggfunc='count')
 
 print(comic_counts)
 
-# create a histogram image of the data
-comic_counts.plot(kind='bar', title='Number of Comics per Character', legend=True)
+# create a bar chart image of the data
+comic_counts.plot(
+    kind='bar', title='Number of Comics per Character', legend=True)
 plt.savefig('comic_counts.png')
 
 # close the cursor and connection to so the server can allocate
