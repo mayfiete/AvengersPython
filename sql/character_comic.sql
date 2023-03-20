@@ -5,6 +5,3 @@ create table character_comic (
 	comic varchar(750), 
 	character_id bigint
 ); 
-
--- select * 
--- from character_comic; 
