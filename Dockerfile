@@ -3,18 +3,13 @@
 # Docker image is a read-only template with instructions for creating a Docker container
 # Docker container is a runtime instance of an image
 
-FROM python:3.9
+FROM python:3.9 
 
-ADD fetch_heroes.py .
-ADD DbConnx.py .
-ADD format_json.py . 
-ADD MarvelClass.py . 
-ADD persist.py . 
-ADD pivot_db_data.py . 
+ADD app/ .
 
 RUN pip install requests datetime pandas 
 
-CMD [ "python", "./fetch_heroes.py","./format_json.py", "./persist.py", "./pivot_db_data.py" ]
+CMD [ "python", "./app/fetch_heroes.py", "./app/format_json.py", "./app/persist.py", "./app/pivot_db_data.py"]
 
 # docker build -t avengerspython .
 # docker run avengerspython
