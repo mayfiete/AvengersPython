@@ -6,5 +6,5 @@ create table character_comic (
 	character_id bigint
 ); 
 
-select * 
-from character_comic; 
+-- select * 
+-- from character_comic; 
