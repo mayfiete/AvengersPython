@@ -3,7 +3,6 @@ import requests
 import json
 import hashlib
 import datetime
-# from random import randint
 from MarvelClass import Marvel
 
 # Define API endpoint and authentication keys

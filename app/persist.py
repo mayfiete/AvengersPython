@@ -1,10 +1,7 @@
 
 
-# create a class to encapsulate the database connection
 from DbConnx import DbConnx
 import csv
-
-# create a class to encapsulate the database connection
 
 conn = DbConnx()
 conn.connect()
@@ -16,8 +13,6 @@ with open('C:/Interview/Avengers/AvengersPython/marvel.csv', 'r') as f:
     # next(reader)  # skip the header row
     rows = [row for row in reader]
 
-# Create a cursor object
-# cur = conn.cursor()
 
 # Construct the SQL query to insert the data into the database
 query = "INSERT INTO character_comic (name, comic) VALUES (%s, %s) ON CONFLICT DO NOTHING;"

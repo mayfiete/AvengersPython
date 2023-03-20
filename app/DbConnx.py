@@ -1,6 +1,7 @@
 
 
 # create a class to encapsulate the database connection
+# enhancements include the ability to pass in the connection parameters from the calling program
 class DbConnx:
     def __init__(self, db_host="marvelgetwell.cs1gposyeo3a.us-east-1.rds.amazonaws.com", db_name="postgres", db_user="getwell", db_password="Voltron*09", db_port="5432"
                  ):
