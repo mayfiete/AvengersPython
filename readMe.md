@@ -10,11 +10,11 @@
     4: pivot_db_data.py
 
 ##  Overview of Scripts
-    DbConnx.py: contains the class DbConnx which is used to connect to the database
-    fetch_heroes.py: fetches the data from the API and stores it in a json file
-    format_json.py: formats the json file to a more readable format
-    persist.py: persists the data into the database
-    pivot_db_data.py: pivots the data from the database to a more readable format
-    message_broker.py: message broker - connecting Python to rabbitmq
+    * DbConnx.py: contains the class DbConnx which is used to connect to the database
+    * fetch_heroes.py: fetches the data from the API and stores it in a json file
+    * format_json.py: formats the json file to a more readable format
+    * persist.py: persists the data into the database
+    * pivot_db_data.py: pivots the data from the database to a more readable format
+    * message_broker.py: message broker - connecting Python to rabbitmq
 
 ** message broker logic is still being worked out ** 
