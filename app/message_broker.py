@@ -1,6 +1,6 @@
 import pika
 import json
-from dbconnx import DbConnx
+from db_connx import DbConnx
 
 # RabbitMQ connection parameters
 rabbitmq_host = 'localhost'
