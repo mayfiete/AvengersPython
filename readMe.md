@@ -1,15 +1,15 @@
 
-### Get Well Python Project ### 
+# Get Well Python Project
 
-## This is a project to fetch data from an API and store it in a database. The data is then pivoted to a more readable format.
+** This is a project to fetch data from an API and store it in a database. The data is then pivoted to a more readable format. **
 
-# sequence of commands to run the program
+** sequence of commands to run the program **
     1: fetch_heroes.py
     2: format_json.py
     3: persist.py
     4: pivot_db_data.py
 
-# overview of scripts
+** overview of scripts **
     DbConnx.py: contains the class DbConnx which is used to connect to the database
     fetch_heroes.py: fetches the data from the API and stores it in a json file
     format_json.py: formats the json file to a more readable format
