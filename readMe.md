@@ -1,5 +1,5 @@
 
-# Get Well Python Project
+# Avengers Python Project
 
 ** This is a project to fetch data from an API and store it in a database. The data is then pivoted to a more readable format. **
 
