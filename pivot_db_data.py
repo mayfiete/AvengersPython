@@ -22,12 +22,12 @@ rows = conn.fetchall()
 # Create a pivot table using the pandas pivot_table() function
 df = pd.DataFrame(rows, columns=['name', 'comic'])
 # count the number of comics for each character
-comic_counts = df.groupby('name')['comic'].count()
+comic_counts = df.pivot_table(index='name', aggfunc='count')
 
 print(comic_counts)
 
 # create a histogram image of the data
-comic_counts.plot(kind='hist', title='Number of Comics per Character')
+comic_counts.plot(kind='bar', title='Number of Comics per Character', legend=True)
 plt.savefig('comic_counts.png')
 
 # close the cursor and connection to so the server can allocate
