@@ -1,0 +1,30 @@
+{
+  "version": "2.0",
+  "name": "Avengers",
+  "id": "a1e90902-da50-48e0-9423-09de35ec1b4c",
+  "databaseType": "PostgreSql",
+  "development": {
+    "scriptsFolder": "./schema-model"
+  },
+  "deployment": {
+    "flywayConfFiles": [
+      "./flyway.conf"
+    ],
+    "targetDatabases": [
+      {
+        "connectionProvider": {
+          "type": "UsernamePassword",
+          "url": "jdbc:postgresql://marvelgetwell.cs1gposyeo3a.us-east-1.rds.amazonaws.com:5432/postgres",
+          "username": "getwell",
+          "password": {
+            "secretType": "DefaultSecretStore",
+            "name": "Flyway Desktop 43c714f2-6f32-46c0-8ebe-10430f2cd4c0"
+          }
+        },
+        "schemas": [
+          "public"
+        ]
+      }
+    ]
+  }
+}
