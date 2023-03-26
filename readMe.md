@@ -18,3 +18,5 @@
     * message_broker.py: message broker - connecting Python to rabbitmq
 
 ** message broker logic is still being worked out ** 
+
+** Database migrations managed using Flyway ** 
