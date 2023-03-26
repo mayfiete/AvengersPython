@@ -19,6 +19,4 @@
     * message_broker.py: message broker - connecting Python to rabbitmq
     * write_to_mongoddb.py: copy data from csv into mongodb
 
-** message broker logic is still being worked out ** 
-
 ** Database migrations managed using Flyway ** 

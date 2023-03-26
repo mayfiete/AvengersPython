@@ -9,7 +9,7 @@ ADD app/ .
 
 RUN pip install requests datetime pandas 
 
-CMD [ "python", "./app/fetch_heroes.py", "./app/format_json.py", "./app/persist.py", "./app/pivot_db_data.py"]
+CMD [ "python", "./app/fetch_heroes.py", "./app/format_json.py", "./app/persist.py", "./app/pivot_db_data.py", "./app/write_to_mongodb.py"]
 
 # docker build -t avengerspython .
 # docker run avengerspython
