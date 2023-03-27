@@ -33,10 +33,10 @@ with open(file_name) as f:
     for name in names:
         split_name = name.split(',')
         for single_name in split_name:
-            row = x.fetch_characters(single_name.strip(), 2)
+            row = x.fetch_characters(single_name.strip(), 20)
             print("Comic Character: ", row)
             print(single_name)
-            with open('C:/Interview/Avengers/AvengersPython/marvel.json', 'a') as outfile:
+            with open('C:/Interview/Avengers/AvengersPython/marvel.json', 'w') as outfile:
                 json.dump(row, outfile)
                 outfile.write(' ')
 
