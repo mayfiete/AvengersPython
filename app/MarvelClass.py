@@ -23,14 +23,14 @@ class Marvel():
             'hash': self.hashed_String,
         }
 
-    def fetch_characters(self, name="Human Torch", limit=20):
+    def fetch_characters(self, name="Human Torch", limit=2):
         self.baseURI += "/characters?name={}".format(
             name) + "&limit={}".format(limit)
         # print(self.baseURI)
         resp = requests.get(self.baseURI, params=self.url_params)
         return resp.json()
 
-    def fetch_characters_by_id(self, char_id="1009652", limit=20):
+    def fetch_characters_by_id(self, char_id="1009652", limit=2):
         # limit specifies how  many items to display
         if limit is not None:
             self.url_params['limit'] = limit

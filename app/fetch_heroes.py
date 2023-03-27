@@ -25,13 +25,23 @@ if not public_key or not private_key:
 
 x = Marvel(public_key, private_key)
 
-row = x.fetch_characters('Wolverine', 20)
-print("Comic Character: ", row)
+# import names from the hero_names.txt file, parse commas and new lines
+file_name = 'C:/Interview/Avengers/AvengersPython/app/hero_names.txt'
+print(file_name)
+with open(file_name) as f:
+    names = f.read().splitlines()
+    for name in names:
+        split_name = name.split(',')
+        for single_name in split_name:
+            row = x.fetch_characters(single_name.strip(), 2)
+            print("Comic Character: ", row)
+            print(single_name)
+            with open('C:/Interview/Avengers/AvengersPython/marvel.json', 'a') as outfile:
+                json.dump(row, outfile)
+                outfile.write(' ')
 
-# write to a file
-with open('marvel.json', 'w') as f:
-    json.dump(row, f)
 
+# The following code is for testing purposes only
 
 # the following variables can be passed to the os and used by the fetch_heroes function
 # export MARVEL_PUBLIC_KEY="dda446b2e1c24ad15b95764453ea581f"
