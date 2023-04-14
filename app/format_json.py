@@ -12,6 +12,7 @@ df = pd.read_json('C:\AvengersPython\marvel.json')
 # extract results from the json file
 results = df['data']['results']  # returns a list of dictionaries
 hero = results[0]['name']  # returns the name of the first dictionary
+heroId = results[0]['id']  # returns the name of the first dictionary
 
 # returns the collectionURI of the first dictionary
 collectionResource = results[0]['comics']['items']
@@ -28,5 +29,7 @@ for i in range(int(iterator)):
         json.dump(hero, f)
         f.write('|')
         json.dump(collectionResource[i]['name'], f)
+        f.write('|')
+        json.dump(heroId, f)
         # add a new line
         f.write('\n')
