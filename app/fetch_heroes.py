@@ -26,7 +26,7 @@ if not public_key or not private_key:
 x = Marvel(public_key, private_key)
 
 # import names from the hero_names.txt file, parse commas and new lines
-file_name = 'C:/Interview/Avengers/AvengersPython/app/hero_names.txt'
+file_name = 'C:/AvengersPython/app/hero_names.txt'
 print(file_name)
 with open(file_name) as f:
     names = f.read().splitlines()
@@ -36,7 +36,7 @@ with open(file_name) as f:
             row = x.fetch_characters(single_name.strip(), 20)
             print("Comic Character: ", row)
             print(single_name)
-            with open('C:/Interview/Avengers/AvengersPython/marvel.json', 'w') as outfile:
+            with open('C:/AvengersPython/marvel.json', 'w') as outfile:
                 json.dump(row, outfile)
                 outfile.write(' ')
 

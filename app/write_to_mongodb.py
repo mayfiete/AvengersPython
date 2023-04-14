@@ -13,7 +13,7 @@ collection = db["superheroes"]
 
 # Open the CSV file and read its contents
 # IRL the location of the file would be a parameter (likely S3 or Azure Blob Storage)
-with open('C:/Interview/Avengers/AvengersPython/marvel.csv', 'r') as f:
+with open('C:/AvengersPython/marvel.csv', 'r') as f:
     reader = csv.reader(f, delimiter='|')
     # next(reader)  # skip the header row
     rows = [row for row in reader]

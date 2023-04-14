@@ -4,7 +4,7 @@ import pandas as pd
 import json
 
 # read the json file
-df = pd.read_json('C:\Interview\Avengers\AvengersPython\marvel.json')
+df = pd.read_json('C:\AvengersPython\marvel.json')
 
 # view the dataframe
 # print(df.head())
@@ -24,7 +24,7 @@ print(int(iterator))
 for i in range(int(iterator)):
     print(collectionResource[i]['name'])
     # write to csv file
-    with open('C:\Interview\Avengers\AvengersPython\marvel.csv', 'a') as f:
+    with open('C:\AvengersPython\marvel.csv', 'a') as f:
         json.dump(hero, f)
         f.write('|')
         json.dump(collectionResource[i]['name'], f)
