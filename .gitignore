@@ -6,7 +6,7 @@
 __pycache__/
 
 # Ignore virtual environment files
-venv/
+avengerspython_venv/
 
 # Ignore log files
 *.log
