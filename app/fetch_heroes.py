@@ -25,10 +25,12 @@ if not public_key or not private_key:
 
 x = Marvel(public_key, private_key)
 
+
 # import names from the hero_names.txt file, parse commas and new lines
 file_name = 'C:/AvengersPython/app/hero_names.txt'
 print(file_name)
 with open(file_name) as f:
+    # need to loop through the names in the hero_names.txt file
     names = f.read().splitlines()
     for name in names:
         split_name = name.split(',')
