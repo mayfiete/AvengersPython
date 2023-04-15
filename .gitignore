@@ -1,0 +1,19 @@
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore files in the __pycache__ directory
+__pycache__/
+
+# Ignore virtual environment files
+venv/
+
+# Ignore log files
+*.log
+
+# ignore generated files
+app/hero_names.txt
+comic_counts.png
+marvel.csv
+marvel.json
+
