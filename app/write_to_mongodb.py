@@ -22,8 +22,9 @@ with open('C:/AvengersPython/marvel.csv', 'r') as f:
 # Insert the data into the collection
 # collection.insert_many(rows)
 for row in rows:
-    name, comic = row
-    collection.insert_one({"name": name, "comic": comic})
+    name, comic, character_id = row
+    collection.insert_one({"name": name, "comic": comic,
+                          "character_Id": character_id})
 
 # Close the connection to the MongoDB server
 client.close()
