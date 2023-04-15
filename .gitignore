@@ -13,7 +13,7 @@ avengerspython_venv/
 
 # ignore generated files
 app/hero_names.txt
-comic_counts.png
-marvel.csv
-marvel.json
+C:\AvengersPython\comic_counts.png
+C:\AvengersPython\marvel.csv
+C:\AvengersPython\marvel.json
 
