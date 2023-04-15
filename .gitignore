@@ -12,7 +12,7 @@ __pycache__/
 *.log
 
 # ignore generated files
-app/hero_names.txt
+*.txt
 *.png
 *.csv
 *.json
