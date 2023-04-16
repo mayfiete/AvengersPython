@@ -11,8 +11,13 @@ df = pd.read_json('C:\AvengersPython\marvel.json')
 
 # extract results from the json file
 results = df['data']['results']  # returns a list of dictionaries
-hero = results[0]['name']  # returns the name of the first dictionary
-heroId = results[0]['id']  # returns the name of the first dictionary
+try:
+    print(results[0]['name'])
+    hero = results[0]['name']  # returns the name of the first dictionary
+    heroId = results[0]['id']  # returns the name of the first dictionary
+except IndexError:
+    print("Index out of range!")
+    exit()  # exit the program
 
 # returns the collectionURI of the first dictionary
 collectionResource = results[0]['comics']['items']
@@ -25,7 +30,7 @@ print(int(iterator))
 for i in range(int(iterator)):
     print(collectionResource[i]['name'])
     # write to csv file
-    with open('C:\AvengersPython\marvel.csv', 'a') as f:
+    with open('C:\AvengersPython\marvel.csv', 'w') as f:
         json.dump(hero, f)
         f.write('|')
         json.dump(collectionResource[i]['name'], f)
