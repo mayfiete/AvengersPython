@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Add Superhero</title>
+</head>
+
+<body>
+    <h1>Add Superhero</h1>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <form method="post" action="/add">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <br>
+        <label>Rating:</label>
+        <input type="number" name="rating" step="0.1" min="0" max="10" required>
+        <br>

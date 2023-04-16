@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>Superhero Ratings</title>
+</head>
+<body>
+    <h1>Superhero Ratings</h1>
+    <p>Average rating: {{ average_rating }}</p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Rating</th>
+        </tr>
+        {% for hero in superheroes %}
+        <tr>
+            <td>{{ hero['name'] }}</td>
+            <td>{{ hero['rating'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
