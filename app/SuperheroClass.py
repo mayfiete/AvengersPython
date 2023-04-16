@@ -27,14 +27,14 @@ class Superhero():
         # close the connection
         conn.close()
 
-    def count_of_comics(self):
-        return len(self.comics)
+    # def count_of_comics(self):
+    #     return len(self.comics)
 
 
 # Example usage
-Rogue = Superhero('Rogue')
-print(Rogue.name)  # Output: Spider-Man
-print(Rogue.comics)
+# Rogue = Superhero('Rogue')
+# print(Rogue.name)  # Output: Spider-Man
+# print(Rogue.comics)
 
-rogue_comics = Rogue.count_of_comics()
-print(rogue_comics)
+# rogue_comics = Rogue.count_of_comics()
+# print(rogue_comics)
