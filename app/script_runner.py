@@ -5,6 +5,7 @@ scripts_to_execute = [
     'app/fetch_heroes.py',
     'app/format_json.py',
     'app/persist.py',
+    'app/write_to_mongodb.py',
     'app/pivot_db_data.py'
 ]
 
