@@ -1,5 +1,10 @@
 from flask import Flask, render_template, request
 
+# import DbConnx from db_connx.py
+from DbConnx import DbConnx
+
+conn = DbConnx()
+
 app = Flask(__name__)
 
 # Define a list of superheroes and their ratings
