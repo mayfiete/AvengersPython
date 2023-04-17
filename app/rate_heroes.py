@@ -4,18 +4,28 @@ from flask import Flask, render_template, request
 from DbConnx import DbConnx
 
 conn = DbConnx()
+conn.connect()
 
-app = Flask(__name__)
+# Construct the SQL query to insert the data into the database
+query = "SELECT DISTINCT name FROM character_comic;"
+# Execute the query for each row in the CSV file
+conn.execute(query)
+
+# fetch all the rows from the database
+rows = conn.fetchall()
+
+superheroes = []
 
 # Define a list of superheroes and their ratings
-superheroes = [
-    {'name': 'Superman', 'rating': 8.5},
-    {'name': 'Spiderman', 'rating': 9.0},
-    {'name': 'Batman', 'rating': 8.0},
-    {'name': 'Wonder Woman', 'rating': 8.5},
-]
+# add rows to set
+for row in rows:
+    superheroes.append({'name': row[0], 'rating': 0})
+
+print(superheroes)
 
 # Define a function to calculate the average rating
+
+app = Flask(__name__)
 
 
 def get_average_rating():
