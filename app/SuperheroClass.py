@@ -9,7 +9,7 @@ from DbConnx import DbConnx
 class Superhero():
     '''Superhero class'''
 
-    def __init__(self, name, comics=[]):
+    def __init__(self, name, comics=[]):  # comics=[] is a default argument
         self.name = name
         self.comics = set(comics)
 
@@ -27,7 +27,13 @@ class Superhero():
         # close the connection
         conn.close()
 
-    # def count_of_comics(self):
+    def __len__(self):
+        return len(self.comics)
+
+    def __getcomics__(self): # get a list of all of a characters comics
+        return self.comics
+
+    # def count_of_comics(self): # this is a method
     #     return len(self.comics)
 
 
@@ -38,3 +44,11 @@ class Superhero():
 
 # rogue_comics = Rogue.count_of_comics()
 # print(rogue_comics)
+
+# Rogue = Superhero('Rogue')
+# rogue_comics = Rogue.__len__()
+# print(rogue_comics)
+
+
+# rogue_first_comic = Rogue.__getcomics__()
+# print(rogue_first_comic)
