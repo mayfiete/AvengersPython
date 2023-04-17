@@ -9,6 +9,9 @@
     3: persist.py
     4: pivot_db_data.py
     5: write_to_mongdb.py 
+    6: rate_heroes.py
+OR 
+    script_runner.py
 
 ##  Overview of Scripts
     * DbConnx.py: contains the class DbConnx which is used to connect to the database

@@ -1,5 +1,4 @@
 # create a class to encapsulate the database connection and query execution
-# from matplotlib import pyplot as plt
 import matplotlib.pyplot as plt
 import csv
 import pandas as pd
