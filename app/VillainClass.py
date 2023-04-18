@@ -16,6 +16,12 @@ class Villain(Superhero):
         self.comics = set(comics)
         self.isVillain = isVillain
 
+    def __repr__(self) -> str:
+        return f'{self.name}'
+
+    def __str__(self) -> str:
+        return f'{self.name} serves evil in {len(self.comics)} comics'
+
 
 # Rogue = Villain('Rogue')
 # rogue_comics = Rogue.__len__()
