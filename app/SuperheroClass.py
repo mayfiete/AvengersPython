@@ -32,6 +32,12 @@ class Superhero():
 
     def __getcomics__(self): # get a list of all of a characters comics
         return self.comics
+    
+    def __repr__(self) -> str:
+        return f'{self.name}'
+    
+    def __str__(self) -> str:
+        return f'{self.name} is in {len(self.comics)} comics'
 
     # def count_of_comics(self): # this is a method
     #     return len(self.comics)
@@ -52,3 +58,5 @@ class Superhero():
 
 # rogue_first_comic = Rogue.__getcomics__()
 # print(rogue_first_comic)
+# print(Rogue.__str__())
+
