@@ -12,9 +12,8 @@ class SetAnalysis:
         return self.hero1.comics.intersection(self.hero2.comics)
 
 
-x = SetAnalysis().intersection()
-print(x)
+# x = SetAnalysis().intersection()
+# print(x)
 
-
-y = SetAnalysis(sh('Rogue'), sh('Wolverine')).intersection()
-print(y)
+# y = SetAnalysis(sh('Rogue'), sh('Wolverine')).intersection()
+# print(y)
