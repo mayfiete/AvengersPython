@@ -2,7 +2,7 @@ import requests
 
 # Set up API request
 url = "https://api.openai.com/v1/engines/davinci-codex/completions"
-prompt = input("Enter your prompt: ")
+prompt = input("Who is your favorite superhero? ")
 data = {
     "prompt": prompt,
     "max_tokens": 1024,
@@ -11,7 +11,7 @@ data = {
 }
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer YOUR_API_KEY",
+    "Authorization": "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",
 }
 
 # Send API request
