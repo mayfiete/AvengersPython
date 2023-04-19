@@ -9,7 +9,11 @@ class SetAnalysis:
         self.hero2 = hero2 or sh('Wolverine', ['X-Men', 'X-Force'])
 
     def intersection(self):
-        return self.hero1.comics.intersection(self.hero2.comics)
+        return self.hero1.comics.intersection(self.hero2.comics) 
+    
+    def union(self):
+        return self.hero1.comics.union(self.hero2.comics)
+    
 
 
 # x = SetAnalysis().intersection()
