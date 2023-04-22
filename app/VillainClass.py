@@ -19,15 +19,15 @@ class Villain(Superhero):
     def __repr__(self) -> str:
         return f'{self.name}'
 
+    def __len__(self) -> int:
+        return len(self.comics)
+
+    # generator function
     def __str__(self) -> str:
         return f'{self.name} serves evil in {len(self.comics)} comics'
 
 
-# Rogue = Villain('Rogue')
-# rogue_comics = Rogue.__len__()
-# print(rogue_comics)
-
-
-# rogue_first_comic = Rogue.__getcomics__()
-# print(rogue_first_comic)
-# print(Rogue.__str__())
+Juggernaut = Villain('Juggernaut')
+juggernaut_comics = Juggernaut.__str__()
+print(Juggernaut.__len__())
+print(juggernaut_comics)

@@ -46,11 +46,20 @@ class Superhero():
     def count_of_comics(self):
         return len(self.comics)
 
+    # generator function
+    def __iter__(self):
+        for comic in self.comics:
+            yield comic
+
 
 # Example usage
-# Rogue = Superhero('Rogue')
+Rogue = Superhero('Rogue')
 # print(Rogue.name)  # Output: Spider-Man
 # print(Rogue.comics)
+
+x = Rogue.__iter__()
+print(next(x))
+print(next(x))
 
 # rogue_comics = Rogue.count_of_comics
 # print(rogue_comics)
