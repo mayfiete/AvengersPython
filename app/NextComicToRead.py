@@ -44,3 +44,7 @@ class NextComicToRead(Superhero):
 # x = Rogue.__iter__()
 # print(next(x))
 # print(next(x))
+
+
+# use generators to go over long lists
+# can be used in place of list comprehensions > generator comprehensions
