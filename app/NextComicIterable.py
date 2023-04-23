@@ -19,13 +19,9 @@ class NextComicIterable(Superhero):
         return self.comics[index]
 
 
-nci = NextComicIterable(name="Wolverine")
+# nci = NextComicIterable(name="Wolverine")
+# # print(nci.name)
 
-# iterate over the comics in the NextComicIterable object
-for comic in nci:
-    print(comic)
-
-# find comics from 2017
-for comic in nci:
-    filtered_strings = list(filter(lambda x: '2017' in x, comic))
-    print(filtered_strings)
+# # iterate over the comics in the NextComicIterable object
+# for comic in nci:
+#     print(comic.__getitem__(comic))
