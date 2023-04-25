@@ -73,20 +73,20 @@ class Superhero():
 # print(rogue_first_comic)
 # print(Rogue.__str__())
 
-# find comics from 2012
-nci = Superhero(name="Wolverine").comics
-# print(nci)
-for comic in nci:
-    # print(comic)
-    # find comics from 2017
-    if "2012" in comic:
-        print(comic)
-    else:
-        pass
+# # find comics from 2012
+# nci = Superhero(name="Wolverine").comics
+# # print(nci)
+# for comic in nci:
+#     # print(comic)
+#     # find comics from 2017
+#     if "2012" in comic:
+#         print(comic)
+#     else:
+#         pass
 
-wolverine_upper_case = Superhero(name="Wolverine").comics
-for comic in wolverine_upper_case:
-    if "Wolverine" in comic:
-        print(comic.upper())
-    else:
-        pass
+# wolverine_upper_case = Superhero(name="Wolverine").comics
+# for comic in wolverine_upper_case:
+#     if "Wolverine" in comic:
+#         print(comic.upper())
+#     else:
+#         pass
