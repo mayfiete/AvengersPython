@@ -42,6 +42,13 @@ class HeroesResource(Resource):
         for hero in heroes:
             result.append({'id': hero.id, 'name': hero.name})
         return result
+    
+    def post(self):
+        '''
+        Create a new hero
+        '''
+        return {'status': 'success'}, 201
+    
 
 
 api.add_resource(HeroesResource, '/heroes')
