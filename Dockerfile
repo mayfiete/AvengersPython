@@ -9,7 +9,11 @@ ADD app/ .
 
 RUN pip install requests datetime pandas 
 
-CMD [ "python", "./app/fetch_heroes.py", "./app/format_json.py", "./app/persist.py", "./app/pivot_db_data.py", "./app/write_to_mongodb.py"]
+# need to create a script to create a hero_names.txt file
+RUN echo "Wolverine" > hero_names.txt
+
+
+CMD [ "python", "script_runner.py"]
 
 # docker build -t avengerspython .
 # docker run avengerspython
