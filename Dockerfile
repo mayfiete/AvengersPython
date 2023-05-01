@@ -7,7 +7,7 @@ FROM python:3.9
 
 ADD app/ .
 
-RUN pip install requests datetime pandas 
+RUN app/requirements.txt .
 
 # need to create a script to create a hero_names.txt file
 RUN echo "Wolverine" > hero_names.txt
